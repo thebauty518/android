@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Detalles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.appgrupal.InformacionT">
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <TextView
+        android:id="@+id/Ndocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero De Documento:"
+        android:textSize="20sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/Numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1007445064"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/NombreE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Junior"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apellido:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ApellidoE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bonilla"
+        android:textSize="16sp" />
+
+</LinearLayout>

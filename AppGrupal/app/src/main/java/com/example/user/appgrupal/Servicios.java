@@ -1,12 +1,14 @@
 package com.example.user.appgrupal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -18,6 +20,12 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Servicios extends Fragment {
+    View vista;
+    private Button btnLimpieza;
+    private Button btnEntretenimiento;
+    private Button btnAcarreo;
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -58,13 +66,62 @@ public class Servicios extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_servicios, container, false);
+
+
+        vista=inflater.inflate(R.layout.fragment_servicios, container, false);
+
+        btnLimpieza =(Button) vista.findViewById(R.id.btnRapidas);
+        btnLimpieza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             //   Intent intent =  new Intent(Servicios.this, Main2Activity.class);
+               // startActivity(intent);
+
+                    Intent Mapa = new Intent( getActivity() , ServicioL.class);
+                    startActivity(Mapa);
+
+
+            }
+        });
+
+        btnAcarreo =(Button) vista.findViewById(R.id.btnPostres);
+        btnAcarreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //   Intent intent =  new Intent(Servicios.this, Main2Activity.class);
+                // startActivity(intent);
+
+                Intent Mapa = new Intent( getActivity() , ServicioA.class);
+                startActivity(Mapa);
+
+
+            }
+        });
+
+        btnEntretenimiento =(Button) vista.findViewById(R.id.btnFrutas);
+        btnEntretenimiento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //   Intent intent =  new Intent(Servicios.this, Main2Activity.class);
+                // startActivity(intent);
+
+                Intent Mapa = new Intent( getActivity() , ServicioE.class);
+                startActivity(Mapa);
+
+
+            }
+        });
+
+
+        return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

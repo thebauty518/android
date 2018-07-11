@@ -20,7 +20,11 @@
         <activity
             android:name=".Main3Activity"
             android:label="@string/title_activity_main3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ServicioL" />
+        <activity android:name=".InformacionT" />
+        <activity android:name=".ServicioE" />
+        <activity android:name=".ServicioA"></activity>
     </application>
 
 </manifest>
